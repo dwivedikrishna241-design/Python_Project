@@ -219,6 +219,7 @@ def get(product_type :str):
           if prod["category"].lower().strip() in product_type.lower().strip():
                result.append(prod)
      if len(result)==0:
-          raise HTTPException(status_code=404,detail="No product of selected category")
+          raise HTTPException(status_code=404,detail="No product of the selected category")
      return result
+
 
